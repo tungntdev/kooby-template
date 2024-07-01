@@ -9,6 +9,10 @@ class UserServiceImpl @Inject constructor (private val userRepository: UserRepos
         return userRepository.getAllUsers()
     }
 
+    override fun login(username: String, password: String): User? {
+        return userRepository.login(username, password)
+    }
+
     override fun getUserById(id: Int): User? {
         return userRepository.getUserById(10)
     }

@@ -24,6 +24,7 @@ fun Kooby.decorate() {
 }
 
 private fun getStatusCodeAndMessage(ex: Throwable): Pair<StatusCode, String?> {
+   ex.printStackTrace()
     return when (ex) {
         is LogicException -> Pair(StatusCode.BAD_REQUEST, ex.message)
         is IllegalArgumentException -> Pair(StatusCode.BAD_REQUEST, "app.common.exception-invalid-args")

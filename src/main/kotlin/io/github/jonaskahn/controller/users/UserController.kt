@@ -3,6 +3,7 @@ package io.github.jonaskahn.controller.users
 import com.google.inject.Inject
 import io.github.jonaskahn.entity.User
 import io.github.jonaskahn.services.UserService
+import io.jooby.Body
 import io.jooby.annotation.GET
 import io.jooby.annotation.POST
 import io.jooby.annotation.Path
@@ -18,5 +19,10 @@ class UserController @Inject constructor(private val userService: UserService) {
     @GET("/all")
     fun all(): List<User> {
         return userService.getAllUsers()
+    }
+
+    @POST("/login")
+    fun login(body: RegisterUserRequest): User? {
+        return userService.login(body.name.toString(), body.password.toString())
     }
 }

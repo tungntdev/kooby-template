@@ -9,4 +9,5 @@ interface UserRepository {
     fun getUserById(id: Int): User?
     fun addUser(user: User): User
     fun deleteUser(id: Int): Boolean
+    fun login(username: String, password: String): User?
 }
