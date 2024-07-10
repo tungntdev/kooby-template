@@ -9,5 +9,5 @@ interface UserService {
     fun getUserById(id: Int): User?
     fun addUser(user: User): User
     fun deleteUser(id: Int): Boolean
-    fun login(username: String, password: String): User?
+    fun login(username: String, password: String): String
 }

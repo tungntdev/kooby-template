@@ -1,7 +1,6 @@
 package io.github.jonaskahn.middleware
 
 import io.github.jonaskahn.assistant.Language
-import io.github.jonaskahn.dto.Response
 import io.github.jonaskahn.exception.LogicException
 import io.jooby.MediaType
 import io.jooby.StatusCode
@@ -24,7 +23,6 @@ fun Kooby.decorate() {
 }
 
 private fun getStatusCodeAndMessage(ex: Throwable): Pair<StatusCode, String?> {
-   ex.printStackTrace()
     return when (ex) {
         is LogicException -> Pair(StatusCode.BAD_REQUEST, ex.message)
         is IllegalArgumentException -> Pair(StatusCode.BAD_REQUEST, "app.common.exception-invalid-args")

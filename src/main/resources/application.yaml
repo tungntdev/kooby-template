@@ -1,0 +1,13 @@
+db:
+  datasource:
+    dbName: dev
+    user: dev
+    password: dev
+    url: jdbc:mysql://localhost:3306/YOUR_DB_NAME
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+jpa:
+  packages: io.github.jonaskahn.entity
+  properties:
+    hibernate.dialect: org.hibernate.dialect.MySQLDialect
+    hibernate.hbm2ddl.auto: update

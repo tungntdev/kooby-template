@@ -1,0 +1,83 @@
+[2024-07-03 22:42:10,093]-[worker-1-1] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1146, SQLState: 42S02
+[2024-07-03 22:42:10,094]-[worker-1-1] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Table 'dev.user' doesn't exist
+[2024-07-03 22:48:11,390]-[worker-1-2] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1146, SQLState: 42S02
+[2024-07-03 22:48:11,391]-[worker-1-2] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Table 'dev.user' doesn't exist
+[2024-07-03 22:50:31,428]-[Thread-0] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Shutdown initiated...
+[2024-07-03 22:50:31,438]-[Thread-0] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Shutdown completed.
+[2024-07-03 22:50:31,438]-[Thread-0] INFO  io.github.jonaskahn.App - Stopped App
+[2024-07-03 22:50:50,665]-[main] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Starting...
+[2024-07-03 22:50:50,819]-[main] INFO  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Added connection com.mysql.cj.jdbc.ConnectionImpl@28276e50
+[2024-07-03 22:50:50,821]-[main] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Start completed.
+[2024-07-03 22:50:50,884]-[main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-07-03 22:50:50,938]-[main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[2024-07-03 22:50:51,166]-[main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[2024-07-03 22:50:52,963]-[main] INFO  io.github.jonaskahn.App - App (dev) started
+[2024-07-03 22:50:52,963]-[main] INFO  io.github.jonaskahn.App - routes: 
+
+  GET  /openapi.json
+  GET  /openapi.yaml
+  GET  /swagger/?*
+  POST /users/register
+  POST /users/login
+  GET  /users/all
+
+listening on:
+  http://localhost:8080/
+
+[2024-07-03 22:53:15,825]-[Thread-0] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Shutdown initiated...
+[2024-07-03 22:53:15,835]-[Thread-0] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Shutdown completed.
+[2024-07-03 22:53:15,835]-[Thread-0] INFO  io.github.jonaskahn.App - Stopped App
+[2024-07-03 22:53:37,345]-[main] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Starting...
+[2024-07-03 22:53:37,508]-[main] INFO  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Added connection com.mysql.cj.jdbc.ConnectionImpl@4648ce9
+[2024-07-03 22:53:37,510]-[main] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Start completed.
+[2024-07-03 22:53:37,570]-[main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-07-03 22:53:37,622]-[main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[2024-07-03 22:53:37,871]-[main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[2024-07-03 22:53:39,368]-[main] INFO  io.github.jonaskahn.App - App (dev) started
+[2024-07-03 22:53:39,368]-[main] INFO  io.github.jonaskahn.App - routes: 
+
+  GET  /openapi.json
+  GET  /openapi.yaml
+  GET  /swagger/?*
+  POST /users/register
+  POST /users/login
+  GET  /users/all
+
+listening on:
+  http://localhost:8080/
+
+[2024-07-03 22:58:20,526]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=1m42s893ms).
+[2024-07-03 23:04:26,340]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=5m35s802ms).
+[2024-07-03 23:35:22,917]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=29m56s397ms).
+[2024-07-04 01:05:21,962]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=1h29m59s45ms).
+[2024-07-04 03:05:12,218]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=1h59m50s213ms).
+[2024-07-04 03:13:24,145]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=8m11s952ms).
+[2024-07-04 05:59:40,729]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=2h45m46s438ms).
+[2024-07-04 10:00:08,409]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=4h27s764ms).
+[2024-07-04 11:07:11,100]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=1h7m2s692ms).
+[2024-07-04 14:12:51,541]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=3h5m40s440ms).
+[2024-07-04 18:41:46,528]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=4h28m54s987ms).
+[2024-07-04 18:42:16,210]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Retrograde clock change detected (housekeeper delta=29s682ms), soft-evicting connections from pool.
+[2024-07-04 19:46:31,598]-[mysql.dev housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Thread starvation or clock leap detected (housekeeper delta=9m14s107ms).
+[2024-07-04 20:02:49,851]-[Thread-0] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Shutdown initiated...
+[2024-07-04 20:02:49,854]-[Thread-0] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Shutdown completed.
+[2024-07-04 20:02:49,854]-[Thread-0] INFO  io.github.jonaskahn.App - Stopped App
+[2024-07-04 20:05:34,722]-[main] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Starting...
+[2024-07-04 20:05:34,903]-[main] INFO  com.zaxxer.hikari.pool.HikariPool - mysql.dev - Added connection com.mysql.cj.jdbc.ConnectionImpl@4648ce9
+[2024-07-04 20:05:34,904]-[main] INFO  com.zaxxer.hikari.HikariDataSource - mysql.dev - Start completed.
+[2024-07-04 20:05:34,966]-[main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-07-04 20:05:35,029]-[main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[2024-07-04 20:05:35,268]-[main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+[2024-07-04 20:05:36,886]-[main] INFO  io.github.jonaskahn.App - App (dev) started
+[2024-07-04 20:05:36,887]-[main] INFO  io.github.jonaskahn.App - routes: 
+
+  GET  /openapi.json
+  GET  /openapi.yaml
+  GET  /swagger/?*
+  POST /users/register
+  POST /users/login
+  GET  /users/all
+
+listening on:
+  http://localhost:8080/
+

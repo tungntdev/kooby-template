@@ -15,6 +15,7 @@
         <application.class>io.github.jonaskahn.AppKt</application.class>
 
         <jooby.version>3.1.3</jooby.version>
+        <ebean.version>15.4.0</ebean.version>
         <kotlin.version>2.0.0</kotlin.version>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <maven.compiler.source>17</maven.compiler.source>
@@ -33,10 +34,13 @@
             <groupId>io.jooby</groupId>
             <artifactId>jooby-hikari</artifactId>
         </dependency>
+
         <dependency>
             <groupId>io.jooby</groupId>
             <artifactId>jooby-hibernate</artifactId>
         </dependency>
+
+
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
@@ -240,6 +244,19 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>io.repaint.maven</groupId>
+                <artifactId>tiles-maven-plugin</artifactId>
+                <version>2.40</version>
+                <configuration>
+                    <buildSmells>dependencymanagement, dependencies, repositories, pluginrepositories</buildSmells>
+                    <tiles>
+                        <tile>groupid:antrun1-tile:1.1-SNAPSHOT</tile>
+                        <tile>groupid:antrun2-tile:1.1-SNAPSHOT</tile>
+                    </tiles>
+                </configuration>
             </plugin>
         </plugins>
     </build>

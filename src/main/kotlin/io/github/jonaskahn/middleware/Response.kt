@@ -1,4 +1,4 @@
-package io.github.jonaskahn.dto
+package io.github.jonaskahn.middleware
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonInclude
@@ -38,8 +38,8 @@ class Response<T>(
             }
         }
 
-        fun <T> ok(payload: T): Response<T> {
-            return builder<T>()
+        fun <T> ok(payload: T?): Response<T?> {
+            return builder<T?>()
                 .status(StatusCode.OK.value())
                 .payload(payload)
                 .build()

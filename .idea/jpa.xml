@@ -6,4 +6,7 @@
     <option name="renamerInitialized" value="true" />
     <option name="reverseEngineeringLastDbConnectionId" value="b7ed6723-00f8-430d-a8ae-ed65835bcbac__dev" />
   </component>
+  <component name="JpaPluginProjectSettings">
+    <option name="lastSelectedLanguage" value="Kotlin" />
+  </component>
 </project>

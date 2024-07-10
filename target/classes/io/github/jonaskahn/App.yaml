@@ -4,17 +4,6 @@ info:
   description: My App API description
   version: "1.0"
 paths:
-  /:
-    get:
-      summary: Health Check Endpoints
-      operationId: up
-      responses:
-        "200":
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: string
   /users/register:
     post:
       operationId: register
@@ -48,6 +37,23 @@ paths:
             schema:
               $ref: "#/components/schemas/RegisterUserRequest"
         required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: string
+  /users/info/{id}:
+    get:
+      operationId: get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
       responses:
         "200":
           description: Success

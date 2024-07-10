@@ -1,6 +1,5 @@
 package io.github.jonaskahn
 
-import io.github.jonaskahn.controller.HealthController
 import io.github.jonaskahn.controller.users.UserController
 import io.github.jonaskahn.middleware.decorate
 import io.jooby.OpenAPIModule
@@ -26,10 +25,10 @@ fun Kooby.plugin() {
     install(HikariModule())
     install(GuiceModule())
     install(HibernateModule().scan("io.github.jonaskahn.entity"))
+
 }
 
 fun Kooby.routes() {
-    mvc(HealthController())
     mvc(UserController::class)
 }
 

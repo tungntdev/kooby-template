@@ -7,13 +7,13 @@ import io.jooby.Body
 import io.jooby.annotation.GET
 import io.jooby.annotation.POST
 import io.jooby.annotation.Path
+import io.jooby.annotation.PathParam
 
 @Path("/users")
 class UserController @Inject constructor(private val userService: UserService) {
 
     @POST("/register")
     fun register(request: RegisterUserRequest) {
-
     }
 
     @GET("/all")
@@ -22,7 +22,12 @@ class UserController @Inject constructor(private val userService: UserService) {
     }
 
     @POST("/login")
-    fun login(body: RegisterUserRequest): User? {
+    fun login(body: RegisterUserRequest): String {
         return userService.login(body.name.toString(), body.password.toString())
+    }
+
+    @GET("/info/{id}")
+    fun get(@PathParam("id") id: Int): User? {
+        return userService.getUserById(id)
     }
 }
