@@ -4,8 +4,10 @@ import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
 import com.google.inject.Inject
 import io.github.jonaskahn.entity.User
+import io.github.jonaskahn.exception.LogicException
 import io.github.jonaskahn.services.UserNotFoundException
 import jakarta.persistence.EntityManager
+import org.hibernate.exception.SQLGrammarException
 
 import java.sql.SQLException
 import java.util.*
@@ -15,10 +17,10 @@ class UserRepositoryImpl @Inject constructor(private val entityManager: EntityMa
 
 
     override fun getAllUsers(): List<User> {
-        entityManager.find(User::class.java, 1)
+        return entityManager.createNativeQuery("SELECT * FROM users ORDER BY ID DESC LIMIT 100", User::class.java).resultList as List<User>
     }
 
-    override fun login(username: String, password: String): String {
+    override fun login(username: String, password: String): String? {
         val query =
             entityManager.createNativeQuery("SELECT * FROM users WHERE name = ? AND password = ?", User::class.java)
         query.setParameter(1, username)
@@ -27,13 +29,14 @@ class UserRepositoryImpl @Inject constructor(private val entityManager: EntityMa
         try {
             val result = query.resultList
             if(result.isEmpty()){
-                return ""
+                return null
             }
             val user = result.first() as User
             return user.name?.let { generateToken(it) }.toString()
-        }catch (e: SQLException){
-            println(e)
-            return ""
+        }catch (e: SQLGrammarException){
+            throw LogicException("Database error occurred", e)
+        }catch (e: Exception) {
+            throw LogicException("An unexpected error occurred", e)
         }
     }
 

@@ -1,5 +1,7 @@
 package io.github.jonaskahn.entity
 
+import com.fasterxml.jackson.annotation.JsonAlias
+import com.fasterxml.jackson.annotation.JsonProperty
 import jakarta.persistence.*
 
 @Entity
@@ -13,6 +15,8 @@ open class User {
     @Column(name = "name", nullable = false, length = 50)
     open var name: String? = null
 
+
+    @JsonProperty("secret")
     @Column(name = "password", nullable = false, length = 1000)
     open var password: String? = null
 }

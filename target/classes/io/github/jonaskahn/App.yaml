@@ -71,7 +71,7 @@ components:
           format: int32
         name:
           type: string
-        password:
+        secret:
           type: string
     RegisterUserRequest:
       type: object

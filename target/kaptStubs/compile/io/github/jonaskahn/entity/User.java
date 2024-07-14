@@ -12,6 +12,7 @@ public class User {
     @jakarta.persistence.Column(name = "name", nullable = false, length = 50)
     @org.jetbrains.annotations.Nullable()
     private java.lang.String name;
+    @com.fasterxml.jackson.annotation.JsonProperty(value = "secret")
     @jakarta.persistence.Column(name = "password", nullable = false, length = 1000)
     @org.jetbrains.annotations.Nullable()
     private java.lang.String password;

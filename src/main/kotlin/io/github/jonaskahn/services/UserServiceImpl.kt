@@ -9,7 +9,7 @@ class UserServiceImpl @Inject constructor (private val userRepository: UserRepos
         return userRepository.getAllUsers()
     }
 
-    override fun login(username: String, password: String): String {
+    override fun login(username: String, password: String): String? {
         return userRepository.login(username, password)
     }
 

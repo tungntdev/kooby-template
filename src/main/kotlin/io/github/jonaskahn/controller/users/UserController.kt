@@ -22,7 +22,7 @@ class UserController @Inject constructor(private val userService: UserService) {
     }
 
     @POST("/login")
-    fun login(body: RegisterUserRequest): String {
+    fun login(body: RegisterUserRequest): String? {
         return userService.login(body.name.toString(), body.password.toString())
     }
 
